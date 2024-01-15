@@ -1,0 +1,141 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("🇷🇺Anime Heroes Simulator 🇷🇺", "RJTheme3")
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("AutoFarm")
+Section:NewButton("Auto Attack", "auto attack and yen", function()
+print("on")
+    while wait() do 
+local args = {[1] = 1}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Punch"):FireServer(unpack(args))
+local args = {[1] = 1}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Click"):FireServer(unpack(args))
+end
+end)
+Section:NewButton("Auto Skill", "Use skill 1-4", function()
+    print("on")
+    while wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill1"):FireServer() game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill2"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill3"):FireServer() game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill4"):FireServer()
+end
+end)
+Section:NewButton("Auto SpinWheel", "opens the wheel of fortune every 10 seconds", function()
+    print("on")
+    while wait(10) do game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Spin Wheel"):FireServer()
+end
+end)
+Section:NewButton("AutoClaimGift", "automatically picks up gifts for you", function()
+print("on")
+    while wait(2) do
+    wait(0.5)
+    local args = {
+    	--1
+    [1] = "Gift1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--2
+wait(0.5)
+local args = {
+    [1] = "Gift2"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--3
+wait(0.5)
+local args = {
+    [1] = "Gift3"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--4
+wait(0.5)
+local args = {
+    [1] = "Gift4"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--
+wait(0.5)
+local args = {
+    [1] = "Gift5"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--6
+wait(0.5)
+local args = {
+    [1] = "Gift6"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--7
+wait(0.5)
+local args = {
+    [1] = "Gift7"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--8
+wait(0.5)
+local args = {
+    [1] = "Gift8"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--9
+wait(0.5)
+local args = {
+    [1] = "Gift9"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--10
+wait(0.5)
+local args = {
+    [1] = "Gift10"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--11
+wait(0.5)
+local args = {
+    [1] = "Gift11"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+--12
+wait(0.5)
+local args = {
+    [1] = "Gift12"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("FreeGift"):FireServer(unpack(args))
+    end
+end)
+Section:NewButton("Auto GetPetEx", "Наверное не работает!", function()
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("GetPetExists"):InvokeServer()
+end)
+local Tab = Window:NewTab("Misc")
+
+local Section = Tab:NewSection("Open Egg")
+Section:NewButton("OpenEgg", "Dragon Orb", function()
+local args = {
+    [1] = "Dragon Orb",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HatchEgg"):InvokeServer(unpack(args))
+end)
+
+local Section = Tab:NewSection("Teleport")
+
+Section:NewButton("FarmGems", "Tp Demon Forest", function()
+wait(0.5)
+workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.Map.Areas["Demon Forest"].Other.BossArea.CFrame
+wait(5)
+workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.NPCS.Akazi.HumanoidRootPart.CFrame
+end)
