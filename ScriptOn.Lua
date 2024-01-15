@@ -133,9 +133,21 @@ end)
 
 local Section = Tab:NewSection("Teleport")
 
-Section:NewButton("FarmGems", "Tp Demon Forest", function()
-wait(0.5)
+Section:NewButton("Demon Forest", "Tp Demon Forest", function()
+while wait(2) do
 workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.Map.Areas["Demon Forest"].Other.BossArea.CFrame
-wait(5)
-workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.NPCS.Akazi.HumanoidRootPart.CFrame
+end
+end)
+
+
+local Section = Tab:NewSection("Train")
+
+Section:NewButton("Train1", "Train1 Boost tp", function()
+workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.ScriptSabitleriTraining.Train1.CFrame
+end)
+Section:NewButton("Train2", "Train2 Boost tp", function()
+workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.ScriptSabitleriTraining.Train2.CFrame
+end)
+Section:NewButton("Train3", "Train3 Boost tp", function()
+workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.ScriptSabitleriTraining.Train3.CFrame
 end)
