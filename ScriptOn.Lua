@@ -122,7 +122,7 @@ end)
 local Tab = Window:NewTab("Misc")
 
 local Section = Tab:NewSection("Open Egg")
-Section:NewButton("OpenEgg", "Dragon Orb", function()
+Section:NewButton("Dragon Orb", "Open one Orb", function()
 local args = {
     [1] = "Dragon Orb",
     [2] = 1
@@ -130,16 +130,16 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HatchEgg"):InvokeServer(unpack(args))
 end)
+local Tab = Window:NewTab("Teleport")
+local Section = Tab:NewSection("TP AREA BOSS")
 
-local Section = Tab:NewSection("Teleport")
-
-Section:NewButton("Demon Forest", "Tp Demon Forest", function()
+Section:NewButton("Demon Forest", "TP BOSS AKAZI", function()
 while wait(2) do
 workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.Map.Areas["Demon Forest"].Other.BossArea.CFrame
 end
 end)
 
-
+local Tab = Window:NewTab("Farm")
 local Section = Tab:NewSection("Train")
 
 Section:NewButton("Train1", "Train1 Boost tp", function()
