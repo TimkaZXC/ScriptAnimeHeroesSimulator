@@ -205,4 +205,16 @@ end)
 
 local Section = Tab:NewSection("AutoRank")
 Section:NewButton("Auto Rank", "automatically takes the reward for the rank", function()
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("RankUP"):InvokeServer()
+end)
+
+local Tab = Window:NewTab("Invite Reward")
+local Section = Tab:NewSection("Invite")
+
+Section:NewButton("Invite Reward 1", "automatically takes the reward for the Invited", function()
+local args = {
+    [1] = "Invite1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("InviteGift"):FireServer(unpack(args))
 end)
