@@ -151,3 +151,58 @@ end)
 Section:NewButton("Train3", "Train3 Boost tp", function()
 workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.ScriptSabitleriTraining.Train3.CFrame
 end)
+
+local Section = Tab:NewSection("Potion")
+Section:NewButton("Potion", "use all potion(one by one)", function()
+-- Yen Vial
+
+local args = {
+    [1] = "Yen Vial"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BuyPotion"):InvokeServer(unpack(args))
+
+--Grm Vial
+
+local args = {
+    [1] = "Gem Vial"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BuyPotion"):InvokeServer(unpack(args))
+
+--Lucky Vial
+
+local args = {
+    [1] = "Lucky Vial"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BuyPotion"):InvokeServer(unpack(args))
+
+--Level Vial
+
+local args = {
+    [1] = "Level Vial"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BuyPotion"):InvokeServer(unpack(args))
+
+--Damage Vial
+
+local args = {
+    [1] = "Damage Vial"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BuyPotion"):InvokeServer(unpack(args))
+
+--God Vial
+
+local args = {
+    [1] = "God Vial"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BuyPotion"):InvokeServer(unpack(args))
+end)
+
+local Section = Tab:NewSection("AutoRank")
+Section:NewButton("Auto Rank", "automatically takes the reward for the rank", function()
+end)
