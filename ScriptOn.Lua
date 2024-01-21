@@ -20,6 +20,8 @@ Section:NewButton("Auto Skill", "Use skill 1-4", function()
     while wait() do
 game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill1"):FireServer() game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill2"):FireServer()
 game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill3"):FireServer() game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill4"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill1"):FireServer() game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill1"):FireServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill3"):FireServer() game:GetService("ReplicatedStorage"):WaitForChild("Combat"):WaitForChild("Events"):WaitForChild("Skill3"):FireServer()
 end
 end)
 Section:NewButton("Auto SpinWheel", "opens the wheel of fortune every 10 seconds", function()
@@ -150,6 +152,12 @@ workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.ScriptSabitleriTraini
 end)
 Section:NewButton("Train3", "Train3 Boost tp", function()
 workspace.VipTimXavier.HumanoidRootPart.CFrame = workspace.ScriptSabitleriTraining.Train3.CFrame
+end)
+Section:NewButton("AutoFarmTrain", "MEGA FARM", function()
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+while wait(0.5) do
+plr.CFrame = CFrame.new(-6221, 254, 2812)
+end
 end)
 
 local Section = Tab:NewSection("Potion")
