@@ -1,5 +1,5 @@
 --[HackPanel]
-local CoreGui = game:GetService("CoreGui")
+local CoreGui = game:GetService("Players").LocalPlayer.PlayerGui
 
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
@@ -404,7 +404,9 @@ local Lib = {}
 					end
 				end
 			  end
-			end
+		end
+		elseif CoreGui:FindFirstChild(name) then
+		CoreGui:FindFirstChild(name):Destroy()
 		end
 		
 	end
