@@ -353,59 +353,59 @@ local Lib = {}
 					ActiveB.MouseButton1Click:Connect(function()
 						functuin()
 					end)
-				end
-				
-				function Lib:ToggleB(name, theme ,color ,functuin:FunctionalTest)
-					local ActiveB = Instance.new("TextButton")
-					local ImageL = Instance.new("ImageLabel")
-					local Inco = Instance.new("Frame")
 					
-					local Toggle = false
-					local ImTg = {"rbxassetid://71881912549164", "rbxassetid://114005620437434", "rbxassetid://89521723015419"}
-					
-					ActiveB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-					ActiveB.BackgroundTransparency = 1
-					ActiveB.Size = UDim2.new(0, 280, 0, 35)
-					ActiveB.Visible = true
-					ActiveB.TextColor3 = Color3.fromRGB(255,255,255)
-					ActiveB.TextScaled = true
-					ActiveB.RichText = true
-					ActiveB.Font = Enum.Font.PatrickHand
-					ActiveB.TextXAlignment = Enum.TextXAlignment.Left
-					ActiveB.Name = "Title"
-					ActiveB.Text = " "..name
-					ActiveB.Parent = SectionS
-					
-					ImageL.Parent = ActiveB
-					ImageL.BackgroundTransparency = 1
-					ImageL.Position = UDim2.new(0.872, 0, 0.056)
-					ImageL.Size = UDim2.new(0,30,0,30)
-					ImageL.Image = ImTg[1]
-					ImageL.ImageColor3 = color
-					
-					Inco.Size = UDim2.new(0, 4, 0, 30)
-					Inco.Parent = ActiveB
-					Inco.BackgroundColor3 = color
+					function Lib:ToggleB(name, theme ,color ,functuin:FunctionalTest)
+						local ActiveB = Instance.new("TextButton")
+						local ImageL = Instance.new("ImageLabel")
+						local Inco = Instance.new("Frame")
 
-					ActiveB.MouseButton1Click:Connect(function()
-						if Toggle == false then
-							Toggle = true
-							ImageL.Image = ImTg[theme]
-							while Toggle == true do
-								functuin()
-								wait()
+						local Toggle = false
+						local ImTg = {"rbxassetid://71881912549164", "rbxassetid://114005620437434", "rbxassetid://89521723015419"}
+
+						ActiveB.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+						ActiveB.BackgroundTransparency = 1
+						ActiveB.Size = UDim2.new(0, 280, 0, 35)
+						ActiveB.Visible = true
+						ActiveB.TextColor3 = Color3.fromRGB(255,255,255)
+						ActiveB.TextScaled = true
+						ActiveB.RichText = true
+						ActiveB.Font = Enum.Font.PatrickHand
+						ActiveB.TextXAlignment = Enum.TextXAlignment.Left
+						ActiveB.Name = "Title"
+						ActiveB.Text = " "..name
+						ActiveB.Parent = SectionS
+
+						ImageL.Parent = ActiveB
+						ImageL.BackgroundTransparency = 1
+						ImageL.Position = UDim2.new(0.872, 0, 0.056)
+						ImageL.Size = UDim2.new(0,30,0,30)
+						ImageL.Image = ImTg[1]
+						ImageL.ImageColor3 = color
+
+						Inco.Size = UDim2.new(0, 4, 0, 30)
+						Inco.Parent = ActiveB
+						Inco.BackgroundColor3 = color
+
+						ActiveB.MouseButton1Click:Connect(function()
+							if Toggle == false then
+								Toggle = true
+								ImageL.Image = ImTg[theme]
+								while Toggle == true do
+									functuin()
+									wait()
+								end
+							elseif Toggle == true then
+
+								Toggle = false
+								ImageL.Image = ImTg[1]
+
 							end
-						elseif Toggle == true then
-							
-							Toggle = false
-							ImageL.Image = ImTg[1]
-							
-						end
-					end)
+						end)
+					end
 				end
 			  end
 			end
-  elseif CoreGui:FindFirstChild(name) then
-    CoreGui:FindFirstChild(name):Destroy()
 		end
+		
 	end
+	return Lib
